@@ -10,8 +10,10 @@ app.use(bodyParser.json());
 
 //import routes
 const postRoute = require("./routes/posts");
+const firstComponentRoute = require("./routes/firstComponent")
 
 app.use("/posts", postRoute);
+app.use("/firstComponent", firstComponentRoute);
 
 // Routes creation
 app.get("/", (req, res) => {
