@@ -19,4 +19,13 @@ router.post("/", async (req, res) => {
   }
 });
 
+//get a post
+router.get("/", async (req, res) => {
+  try {
+    const firstComponet = await FirstComponent.find();
+    res.json(firstComponet);
+  } catch (err) {
+    res.json({ message: err });
+  }
+});
 module.exports = router;
